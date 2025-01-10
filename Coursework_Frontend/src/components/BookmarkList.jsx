@@ -21,7 +21,7 @@ const BookmarkList = () => {
 
         fetch("http://localhost:3001/talks")
             .then((res) => res.json())
-            .then((json) => json.filter((item) => (bookmarks.includes(item.id))))
+            .then((json) => json.filter((item) => (bookmarks ? bookmarks.includes(item.id) : false)))
             .then((talks => talks.sort((a, b) => a.title.localeCompare(b.title))))
             .then((sortedArray) => setTalks({
                 loading: false,

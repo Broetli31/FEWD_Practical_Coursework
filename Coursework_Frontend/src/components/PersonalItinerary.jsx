@@ -18,7 +18,8 @@ const PersonalItinerary = () => {
         })
 
         const itineraryJson = localStorage.getItem('itinerary');
-        const itinerary = JSON.parse(itineraryJson).map((item) => item.id);
+        let itinerary = JSON.parse(itineraryJson);
+        itinerary = itinerary ? itinerary.map((item) => {item.id}) : [];
 
 
         fetch("http://localhost:3001/talks")
