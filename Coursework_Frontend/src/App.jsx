@@ -9,7 +9,6 @@ import MyItinerary from "./pages/MyItinerary.jsx";
 import Bookmarks from "./pages/Bookmarks.jsx";
 
 function App() {
-    // const [count, setCount] = useState(0)
 
     return (
         <>
@@ -22,9 +21,6 @@ function App() {
         </>
     );
 
-    // return (
-    //     <NavigationBar />
-    // )
 }
 
 export default App
