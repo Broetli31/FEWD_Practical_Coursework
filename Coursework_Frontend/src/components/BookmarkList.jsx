@@ -50,7 +50,7 @@ const BookmarkList = () => {
             {talks.loading ? (<p>loading...</p>) : talks.data.length === 0 ? (
                 <p>No Bookmarks saved</p>) : talks.data.map((talk) => {
                 return (
-                    <Talk talk={talk ? talk : null} key={talk.id} canRemove={true} updateParent={updateFilter}/>
+                    <Talk talk={talk ? talk : null} key={talk.id} updateParent={updateFilter}/>
                 )
             })}
         </>
